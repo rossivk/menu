@@ -1,25 +1,99 @@
-* {
-    box-sizing: border-box;
+:root {
+    --eerieBlack: #191919;
+    --peralBrush: #e1cdb9;
+    --backgroundSeashell: #F8F5F2;
+    --burntOrange: #CB5302;
+    --backgroundText: rgba(202, 82, 2, 0.05);
+    --burntOrangeTransperant: #cb52027f;
+
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: #374954;
-    color: white;
-    text-align: center;
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+
+}
+
+
+body {
+    font-family: 'Karla', sans-serif;
+    background: var(--backgroundSeashell);
+    color: var(--eerieBlack);
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-size: 16px;
+    ;
+}
+
+.wrapper {
+    padding: 0 10px;
+}
+
+.background-img {
+    background-image: url(../assets/images/about-us\ -\ Copy-.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 50% 15%; */
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo img {
+    height: 75px;
+}
+
+
 
 #main {
     position: relative;
     list-style: none;
-    background: #6BBE92;
+    background: transparent;
     font-weight: 400;
     font-size: 0;
     text-transform: uppercase;
     display: inline-block;
     padding: 0;
-    margin: 50px auto;
+    margin: 0 auto;
 }
+
+
 
 #main li {
     font-size: 0.8rem;
@@ -28,48 +102,95 @@ body {
     padding: 15px 20px;
     cursor: pointer;
     z-index: 5;
-    min-width: 120px;
+    min-width: 100px;
 }
 
 li {
     margin: 0;
 }
 
-.drop {
-    overflow: hidden;
-    list-style: none;
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    left: 0;
-    top: 48px;
+/**/
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.drop div {
-    -webkit-transform: translate(0, -100%);
-    -moz-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    transform: translate(0, -100%);
-    -webkit-transition: all 0.5s 0.1s;
-    -moz-transition: all 0.5s 0.1s;
-    -ms-transition: all 0.5s 0.1s;
-    transition: all 0.5s 0.1s;
-    position: relative;
+.dropdown .dropdown-content {
+    /* display: none; */
+    position: absolute;
+    /* min-width: 160px; */
+    z-index: 1;
+    top: -300px;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
+
+
+.dropdown-content a {
+    color: var(--backgroundSeashell);
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: var(--eerieBlack);
+    background-color: var(--peralBrush);
+
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    top: 0px;
+
+}
+
+div.img-submenu img {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+
+
+.submenu-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.test {
+    flex-grow: 1;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
 
 .drop li {
     display: block;
+    background: var(--burntOrange);
+    position: absolute;
     padding: 0;
-    width: 100%;
-    background: #3E8760 !important;
+    width: 150px;
+    left: -100px;
+    top: 50px;
+    text-align: center;
 }
+
+
 
 #marker {
     height: 6px;
-    background: #3E8760 !important;
+    background: var(--burntOrange);
     position: absolute;
     bottom: 0;
-    width: 120px;
+    width: 100px;
     z-index: 2;
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
@@ -99,10 +220,10 @@ li {
 }
 
 #main li:nth-child(2):hover~#marker {
-    -webkit-transform: translate(120px, 0);
-    -moz-transform: translate(120px, 0);
-    -ms-transform: translate(120px, 0);
-    transform: translate(120px, 0);
+    -webkit-transform: translate(100px, 0);
+    -moz-transform: translate(100px, 0);
+    -ms-transform: translate(100px, 0);
+    transform: translate(100px, 0);
 }
 
 #main li:nth-child(3):hover ul div {
@@ -113,10 +234,10 @@ li {
 }
 
 #main li:nth-child(3):hover~#marker {
-    -webkit-transform: translate(240px, 0);
-    -moz-transform: translate(240px, 0);
-    -ms-transform: translate(240px, 0);
-    transform: translate(240px, 0);
+    -webkit-transform: translate(200px, 0);
+    -moz-transform: translate(200px, 0);
+    -ms-transform: translate(200px, 0);
+    transform: translate(200px, 0);
 }
 
 #main li:nth-child(4):hover ul div {
@@ -127,8 +248,74 @@ li {
 }
 
 #main li:nth-child(4):hover~#marker {
-    -webkit-transform: translate(360px, 0);
-    -moz-transform: translate(360px, 0);
-    -ms-transform: translate(360px, 0);
-    transform: translate(360px, 0);
+    -webkit-transform: translate(300px, 0);
+    -moz-transform: translate(300px, 0);
+    -ms-transform: translate(300px, 0);
+    transform: translate(300px, 0);
+}
+
+#main li:nth-child(5):hover ul div {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+#main li:nth-child(5):hover~#marker {
+    -webkit-transform: translate(400px, 0);
+    -moz-transform: translate(400px, 0);
+    -ms-transform: translate(400px, 0);
+    transform: translate(400px, 0);
+}
+
+.humburger-menu {
+    display: none;
+    ;
+}
+
+.nav-phone {
+    background: var(--burntOrange);
+    height: 100px;
+    padding: 30px 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.phone-icon {
+    display: inline-block;
+    width: 1.5rem;
+    /* margin: 0 10px; */
+}
+
+.phone-num {
+    text-decoration: none;
+    color: var(--backgroundSeashell);
+}
+
+.top-section {
+    height: 650px;
+    /* background-color: #19191930; */
+}
+
+h1.tittle-name {
+    margin: 0;
+    padding: 100px 0 25px;
+    text-align: left;
+    color: var(--backgroundSeashell);
+}
+
+h5.tittle-content {
+    margin: 0;
+    text-align: left;
+    padding: 25px 0;
+    color: var(--backgroundSeashell);
+    max-width: 550px;
+}
+
+.break-line {
+    margin: 25px 0;
+    height: 6px;
+    background: var(--burntOrange);
+    width: 150px;
+    z-index: 2;
 }
