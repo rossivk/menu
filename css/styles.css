@@ -120,8 +120,8 @@ li {
     position: absolute;
     /* min-width: 160px; */
     z-index: 1;
-    top: -300px;
-    left: 0;
+    top: -500px;
+    left: -50px;
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
 }
@@ -159,7 +159,7 @@ div.img-submenu img {
 .submenu-container {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 600px;
 }
 
 .test {
@@ -290,6 +290,12 @@ div.img-submenu img {
 .phone-num {
     text-decoration: none;
     color: var(--backgroundSeashell);
+}
+
+.opening-time {
+    color: var(--backgroundSeashell);
+    font-size: 1rem;
+    text-align: right;
 }
 
 .top-section {
