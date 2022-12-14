@@ -121,7 +121,11 @@ li {
     /* min-width: 160px; */
     z-index: 1;
     top: -500px;
+<<<<<<< HEAD
     left: -50px;
+=======
+    left: 0;
+>>>>>>> 085aa17d1f76d44523a0e1bc7c20f26ad8600c32
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
 }
