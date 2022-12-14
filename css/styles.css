@@ -121,7 +121,7 @@ li {
     /* min-width: 160px; */
     z-index: 1;
     top: -500px;
-    left: -50px;
+    left: -100px;
     transition: opacity 0.5s ease-in-out;
     opacity: 0;
 }
