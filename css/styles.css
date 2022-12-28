@@ -126,7 +126,7 @@ li {
 
 
 .dropdown-content a {
-    color: var(--backgroundSeashell);
+    color: var(--eerieBlack);
     padding: 5px 10px;
     text-decoration: none;
     display: block;
@@ -150,7 +150,14 @@ div.img-submenu img {
     height: 100px;
     width: 100px;
     overflow: hidden;
+    border: solid 0.5px var(--burntOrangeTransperant);
 }
+
+
+div.img-submenu lottie-player {
+    border: solid 0.5px var(--burntOrangeTransperant);
+}
+
 
 
 
@@ -172,7 +179,7 @@ div.img-submenu img {
 
 .drop li {
     display: block;
-    background: var(--burntOrange);
+    background: var(--peralBrush);
     position: absolute;
     padding: 0;
     width: 150px;
