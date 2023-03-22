@@ -6,6 +6,9 @@
     --backgroundText: rgba(202, 82, 2, 0.05);
     --burntOrangeTransperant: #cb52027f;
 
+    --transition-5: all 0.5s ease-in-out;
+    --transition-2: all 0.2s linear;
+
 }
 
 * {
@@ -23,6 +26,11 @@ h5 {
     font-weight: 600;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (min-width: 1024px) {
     h1 {
         font-size: 5rem;
@@ -31,8 +39,6 @@ h5 {
     h5 {
         font-size: 1.25rem;
     }
-
-
 }
 
 
@@ -48,9 +54,9 @@ body {
     ;
 }
 
-.wrapper {
+/* .wrapper {
     padding: 0 10px;
-}
+} */
 
 .background-img {
     background-image: url(../assets/images/home-page-cover-.jpg);
@@ -74,30 +80,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    /* height: 100px; */
 }
 
 .logo img {
     height: 75px;
+    z-index: 2;
 }
 
 
-
-#main {
+#main-menu {
     position: relative;
-    list-style: none;
-    background: transparent;
-    font-weight: 400;
-    font-size: 0;
+    /* list-style: none; */
+    /* background: transparent; */
+    /* font-weight: 400; */
+    /* font-size: 0; */
     text-transform: uppercase;
-    display: inline-block;
-    padding: 0;
-    margin: 0 auto;
+    /* display: inline-block; */
+    /* padding: 0; */
+    /* margin: 0 auto; */
 }
 
 
-
-#main li {
+#main-menu li {
     font-size: 0.8rem;
     display: inline-block;
     position: relative;
@@ -117,14 +122,18 @@ li {
     display: inline-block;
 }
 
-.dropdown .dropdown-content {
+.dropdown-content {
     position: absolute;
     z-index: 1;
-    top: -500px;
-    left: -100px;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+    width: 100vw;
+    background-color: var(--backgroundSeashell);
+    top: 75px;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition-5);
 }
+
 
 
 .dropdown-content a {
@@ -132,41 +141,48 @@ li {
     padding: 5px 10px;
     text-decoration: none;
     display: block;
+    width: 150px;
+    margin: 0 auto;
 }
 
 .dropdown-content a:hover {
     color: var(--eerieBlack);
     background-color: var(--peralBrush);
-
 }
 
 
-.dropdown:hover .dropdown-content {
+
+div.img-submenu {
+    padding: 20px;
+}
+
+div.img-submenu img,
+div.img-submenu lottie-player {
     display: block;
-    opacity: 1;
-    top: 0px;
-
-}
-
-div.img-submenu img {
     height: 100px;
     width: 100px;
-    overflow: hidden;
-    border: solid 0.5px var(--burntOrangeTransperant);
+    margin: 0 auto;
+    /* border: solid 0.5px var(--burntOrangeTransperant); */
+    box-shadow: 0 -2px 3px var(--burntOrangeTransperant);
+
 }
-
-
-div.img-submenu lottie-player {
-    border: solid 0.5px var(--burntOrangeTransperant);
-}
-
-
 
 
 .submenu-container {
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
+    justify-content: space-evenly;
+    background-color: var(--backgroundSeashell);
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* height: 0; */
+    /* overflow: hidden; */
+    /* transition: var(--transition-5); */
+}
+
+.show-submenu {
+    height: 500px;
 }
 
 .test {
@@ -179,17 +195,16 @@ div.img-submenu lottie-player {
 }
 
 
-.drop li {
+.dropdown-content li {
     display: block;
     background: var(--backgroundSeashell);
-    position: absolute;
+    /* position: absolute; */
     padding: 0;
     width: 150px;
-    left: -50px;
-    top: 50px;
+    left: 0;
+    top: 0;
     text-align: center;
 }
-
 
 
 #marker {
@@ -205,70 +220,71 @@ div.img-submenu lottie-player {
     transition: all 0.35s;
 }
 
-#main li:nth-child(1):hover ul div {
+
+#main-menu li:nth-child(1):hover~#marker {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 
-#main li:nth-child(1):hover~#marker {
+/* #main-menu li:nth-child(1):hover~#marker {
     -webkit-transform: translate(0px, 0);
     -moz-transform: translate(0px, 0);
     -ms-transform: translate(0px, 0);
     transform: translate(0px, 0);
-}
+} */
 
-#main li:nth-child(2):hover ul div {
+/* #main-menu li:nth-child(2):hover ul div {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
-}
+} */
 
-#main li:nth-child(2):hover~#marker {
+#main-menu li:nth-child(2):hover~#marker {
     -webkit-transform: translate(100px, 0);
     -moz-transform: translate(100px, 0);
     -ms-transform: translate(100px, 0);
     transform: translate(100px, 0);
 }
 
-#main li:nth-child(3):hover ul div {
+/* #main-menu li:nth-child(3):hover ul {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
-}
+} */
 
-#main li:nth-child(3):hover~#marker {
+#main-menu li:nth-child(3):hover~#marker {
     -webkit-transform: translate(200px, 0);
     -moz-transform: translate(200px, 0);
     -ms-transform: translate(200px, 0);
     transform: translate(200px, 0);
 }
 
-#main li:nth-child(4):hover ul div {
+/* #main-menu li:nth-child(4):hover ul div {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
-}
+} */
 
-#main li:nth-child(4):hover~#marker {
+#main-menu li:nth-child(4):hover~#marker {
     -webkit-transform: translate(300px, 0);
     -moz-transform: translate(300px, 0);
     -ms-transform: translate(300px, 0);
     transform: translate(300px, 0);
 }
 
-#main li:nth-child(5):hover ul div {
+/* #main-menu li:nth-child(5):hover ul div {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
-}
+} */
 
-#main li:nth-child(5):hover~#marker {
+#main-menu li:nth-child(5):hover~#marker {
     -webkit-transform: translate(400px, 0);
     -moz-transform: translate(400px, 0);
     -ms-transform: translate(400px, 0);
@@ -277,15 +293,14 @@ div.img-submenu lottie-player {
 
 .humburger-menu {
     display: none;
-    ;
 }
 
 .nav-phone {
     background: var(--burntOrange);
-    height: 100px;
-    padding: 30px 10px;
+    padding: 20.5px 10px;
     font-size: 1.5rem;
     font-weight: 600;
+    z-index: 2;
 }
 
 .phone-icon {
@@ -302,6 +317,7 @@ div.img-submenu lottie-player {
     color: var(--backgroundSeashell);
     font-size: 1rem;
     text-align: right;
+    margin: 10px 0 0;
 }
 
 .top-section {

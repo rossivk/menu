@@ -17,84 +17,85 @@
 <body>
   <div class="background-img"></div>
   <main class="wrapper">
-    <header class="navbar">
 
-      <div class="logo">
-        <a href="./index.html"> <img src="./assets/svg/herts-and-essex-planning-logo.svg" alt="hert essex planning.jpg">
-        </a>
+    <header>
+      <div class="navbar">
+
+        <div class="logo">
+          <a href="./index.html"> <img src="./assets/svg/herts-and-essex-planning-logo.svg"
+              alt="hert essex planning.jpg">
+          </a>
+        </div>
+        <nav>
+          <ul id="main-menu">
+            <li>Home</li>
+            <li class="services-btn">Services</li>
+            <li>FAQs</li>
+            <li>About</li>
+            <li>Contact</li>
+            <div id="marker"></div>
+          </ul>
+        </nav>
+        <div class="nav-phone">
+          <a class="phone-icon" href="tel:+441279491285"><i class="fa-solid fa-phone"><img
+                src="./assets/svg/phone-solid-light.svg"></i></a>
+          <a class="phone-num" href="tel:+441279491285">01279 491285</a>
+          <p class="opening-time">Mon - Fri, 9am to 5pm</p>
+        </div>
+        <div class="humburger-menu"><svg viewBox="0 0 14 12" class="hamburger-icon" height="24px">
+            <path d="M13,2 L1,2" class="upper"
+              style="fill: none; stroke: #191919; stroke-linecap: round; stroke-width: 1.5" />
+            <path d="M1,5 L13,5" class="middle"
+              style="fill: none; stroke: #CB5302; stroke-linecap: round; stroke-width: 1.5" />
+            <path d="M13,8 L1,8" class="middle1"
+              style="fill: none; stroke: #191919; stroke-linecap: round; stroke-width: 1.5" />
+            <path d="M1,11 L13,11" class="lower"
+              style="fill: none; stroke: #CB5302; stroke-linecap: round; stroke-width: 1.5" />
+          </svg>
+        </div>
       </div>
-      <nav>
-        <ul id="main">
-          <li>Home</li>
-          <li class="dropdown">Services
-            <ul class="drop">
-              <div class="dropdown-content">
-                <div class="submenu-container">
-                  <li class="test">
-                    <div class="img-submenu"><lottie-player
-                        src="./assets/animations/herts-essex-planning-exsention.json" background="transparent"
-                        speed="1.5" style="width: 100px; height: 100px;" loop hover></lottie-player>
-                    </div><a href="#">Extensions</a>
-                  </li>
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/planning-drawings.svg"></div><a
-                      href="./house-plans/planning-drawings.html">Planning Drawings</a>
-                  </li>
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/planning-appeal.svg"></div><a
-                      href="./house-plans/planning-appeals.html">Planning Appeals</a>
-                  </li>
-                  <!-- <li class="break"></li> -->
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/enforcement-notice.svg"></div><a
-                      href="./house-plans/enforcement-notice.html">Enforcement Notice</a>
-                  </li>
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/building-regulations.svg"></div><a
-                      href="./house-plans/building-regulation-drawings.html">Building Regulation
-                      Drawings</a>
-                  </li>
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/planning-process.svg"></div><a
-                      href="./house-plans/building-regulation-drawings.html">Planning Process</a>
-                  </li>
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/building-regulations.svg"></div><a
-                      href="./house-plans/building-regulation-drawings.html">Building Regulation
-                      Drawings</a>
-                  </li>
-                  <li class="test">
-                    <div class="img-submenu"><img src="./assets/svg/planning-extension.svg"></div><a
-                      href="./house-plans/building-regulation-drawings.html">Building Regulation
-                      Drawings</a>
-                  </li>
-
-                </div>
-
-            </ul>
+      <div class="dropdown-content">
+        <ul class="submenu-container">
+          <li class="test">
+            <div class="img-submenu"><lottie-player src="./assets/animations/herts-essex-planning-exsention.json"
+                background="transparent" speed="1.5" style="width: 100px; height: 100px;" loop hover></lottie-player>
+            </div><a href="#">Extensions</a>
           </li>
-          <li>FAQs</li>
-          <li>About</li>
-          <li>Contact</li>
-          <div id="marker"></div>
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/planning-drawings.svg"></div><a
+              href="./house-plans/planning-drawings.html">Planning Drawings</a>
+          </li>
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/planning-appeal.svg"></div><a
+              href="./house-plans/planning-appeals.html">Planning Appeals</a>
+          </li>
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/enforcement-notice.svg"></div><a
+              href="./house-plans/enforcement-notice.html">Enforcement Notice</a>
+          </li>
+          <li class="break"></li>
+
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/building-regulations.svg"></div><a
+              href="./house-plans/building-regulation-drawings.html">Building Regulation
+              Drawings</a>
+          </li>
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/planning-process.svg"></div><a
+              href="./house-plans/building-regulation-drawings.html">Planning Process</a>
+          </li>
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/building-regulations.svg"></div><a
+              href="./house-plans/building-regulation-drawings.html">Building Regulation
+              Drawings</a>
+          </li>
+          <li class="test">
+            <div class="img-submenu"><img src="./assets/svg/planning-extension.svg"></div><a
+              href="./house-plans/building-regulation-drawings.html">Building Regulation
+              Drawings</a>
+          </li>
         </ul>
-      </nav>
-      <div class="nav-phone">
-        <a class="phone-icon" href="tel:+441279491285"><i class="fa-solid fa-phone"><img
-              src="./assets/svg/phone-solid-light.svg"></i></a>
-        <a class="phone-num" href="tel:+441279491285">01279 491285</a>
-        <p class="opening-time">9am to 5pm</p>
       </div>
-      <div class="humburger-menu"><svg viewBox="0 0 14 12" class="hamburger-icon" height="24px">
-          <path d="M13,2 L1,2" class="upper"
-            style="fill: none; stroke: #191919; stroke-linecap: round; stroke-width: 1.5" />
-          <path d="M1,5 L13,5" class="middle"
-            style="fill: none; stroke: #CB5302; stroke-linecap: round; stroke-width: 1.5" />
-          <path d="M13,8 L1,8" class="middle1"
-            style="fill: none; stroke: #191919; stroke-linecap: round; stroke-width: 1.5" />
-          <path d="M1,11 L13,11" class="lower"
-            style="fill: none; stroke: #CB5302; stroke-linecap: round; stroke-width: 1.5" />
-        </svg></div>
     </header>
 
     <section id="top" class="top-section">
