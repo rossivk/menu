@@ -8,14 +8,13 @@ const marker = document.getElementById('marker');
 
 servicesBtn.addEventListener('mouseover', function () {
   dropDownSubMenu.classList.add('show-submenu');
-  mainMenu.classList.add('marker');
+
 
 });
 
 servicesBtn.addEventListener('mouseout', function () {
   if (!mouseOverOut(dropDownSubMenu)) {
     dropDownSubMenu.classList.remove('show-submenu');
-    mainMenu.classList.add('marker');
   }
 });
 
